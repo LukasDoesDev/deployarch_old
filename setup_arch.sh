@@ -123,11 +123,6 @@ while true; do
     fi
 done
 
-printf ${CYAN}"Enter the username for your NON ROOT user\n>"
-read username
-kernelanswer="${kernelanswer,,}"
-printf ${CYAN}"Enter the Hostname you want to use\n>"
-read hostname
 printf ${WHITE}"### Beginning installation\n"
 
 printf ${WHITE}"### Mounting filesystems\n"
