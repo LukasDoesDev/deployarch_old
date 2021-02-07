@@ -80,7 +80,7 @@ while true; do
             wipefs -a $disk_chk
             cfdisk
             break
-            printf ${CYAN}"Do you want to start the partitioning over?\n"
+            printf ${CYAN}"Do you want to start the partitioning over?\n>"
             read restart_part
             if [ "$restart_part" = "y" ]; then
                 printf ${LIGHTRED}"### Starting over\n"${WHITE}
@@ -124,7 +124,6 @@ while true; do
 done
 
 printf ${CYAN}"Enter the username for your NON ROOT user\n>"
-#There is a possibility this won't work since the handbook creates a user after rebooting and logging as root
 read username
 kernelanswer="${kernelanswer,,}"
 printf ${CYAN}"Enter the Hostname you want to use\n>"
