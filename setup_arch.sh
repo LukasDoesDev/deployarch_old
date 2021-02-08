@@ -126,6 +126,8 @@ printf ${WHITE}"### Beginning installation\n"
 
 printf ${WHITE}"### Mounting filesystems\n"
 mkdir /mnt/arch
+echo p3: $part_3
+echo p1: $part_1
 mount --source ${part_3} --target /mnt/arch
 mkdir /mnt/arch/boot
 mkdir /mnt/arch/boot/efi
