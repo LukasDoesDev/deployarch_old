@@ -13,9 +13,10 @@ chmod +x post_chroot.sh setup_arch.sh
 ```
 And after that script has run, you can optionally unmount the partitions:
 ```sh
+cd /
 umount -R /mnt
 ```
-Then login and run these commands:
+Then reboot to the drive you installed arch on, login and run these commands:
 ```sh
 curl -fsSL https://raw.githubusercontent.com/LukasDoesDev/deployarch/master/after_reboot.sh > /tmp/after_reboot.sh
 chmod +x /tmp/after_reboot.sh
