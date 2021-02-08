@@ -26,10 +26,10 @@ done
 hwclock --systohc
 
 printf ${WHITE}"### Setting locales, keyboard etc\n"
-printf ${CYAN}"Enter your language (ex, \"en_US.UTF-8 UTF-8\") (Remember to add the encoding type such as \"UTF-8\" after \"en_US.UTF-8\" to the end (with a space))\n>"
+printf ${CYAN}"Enter your language in this form: \"<locale> <charset>\" where <locale> is one of the locales placed in /usr/share/i18n/locales and <charset> is one of the charsets placed in /usr/share/i18n/charmaps (ex, \"en_US.UTF-8 UTF-8\")\n>"
 read lang1
 
-printf ${CYAN}"Enter your language (ex, \"en_US.UTF-8\")\n>"
+printf ${CYAN}"Enter your language in this form: \"<locale>\" where <locale> is one of the locales placed in /usr/share/i18n/locales (ex, \"en_US.UTF-8\")\n>"
 read lang2
 
 echo LANG=${lang2} > /etc/locale.conf
@@ -85,7 +85,7 @@ printf ${WHITE}"# You can now optionally unmount the partitions with\n"
 printf ${WHITE}"umount -R /mnt\n"
 printf ${WHITE}"# And you need to reboot\n"
 printf ${WHITE}"reboot\n"
-printf ${WHITE}"# After you've rebooted please run the following command:\n"
+printf ${WHITE}"# After you've rebooted and logged into the root user please run the following command:\n"
 printf ${WHITE}"curl -fsSL https://raw.githubusercontent.com/LukasDoesDev/dotfiles/master/after_reboot.sh | bash\n"
 
 exit
