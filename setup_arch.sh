@@ -85,7 +85,7 @@ while true; do
                 printf ${LIGHTRED}"### Starting over\n"${WHITE}
                 continue
             elif [ "$restart_part" = "n" ]; then
-                
+                printf ""
             else
                 printf ${LIGHTRED}"%s is an invalid answer, do it correctly" $restart_part
                 printf ${WHITE}".\n"
