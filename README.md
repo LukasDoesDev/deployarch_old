@@ -18,8 +18,6 @@ umount -R /mnt
 ```
 Then reboot to the drive you installed arch on, login and run these commands:
 ```sh
-curl -fsSL https://raw.githubusercontent.com/LukasDoesDev/deployarch/master/after_reboot.sh > /tmp/after_reboot.sh
-chmod +x /tmp/after_reboot.sh
-bash /tmp/after_reboot.sh
+curl -fsSL https://raw.githubusercontent.com/LukasDoesDev/deployarch/master/after_reboot.sh | bash
 ```
 And after that you should have a working Arch installation.
