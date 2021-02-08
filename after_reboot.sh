@@ -55,6 +55,6 @@ read q1
 if [q1 == "Y"]; then
     ./deploy_rice.sh
 else
-    printf${LIGHTGREEN}"# ====================\nARCH IS READY?\n===================="
+    printf${LIGHTGREEN}"#====================#\n    ARCH IS READY! \n#====================#"
     printf ${WHITE}"# Your arch installation should now be ready for use!\n"
 
