@@ -81,10 +81,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 printf ${LIGHTGREEN}"# =========================\n"
 printf ${LIGHTGREEN}"# REBOOT NEEDED\n"
 printf ${LIGHTGREEN}"# =========================\n"
-printf ${WHITE}"# You can now optionally unmount the partitions with\n"
-printf ${WHITE}"umount -R /mnt/arch\n"
-printf ${WHITE}"# And you need to reboot\n"
-printf ${WHITE}"reboot\n"
 printf ${WHITE}"# After you've rebooted and logged into the root user please run the following command:\n"
 printf ${WHITE}"curl -fsSL https://raw.githubusercontent.com/LukasDoesDev/dotfiles/master/after_reboot.sh | bash\n"
 
