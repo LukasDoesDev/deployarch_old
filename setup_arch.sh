@@ -126,10 +126,10 @@ printf ${WHITE}"### Beginning installation\n"
 
 printf ${WHITE}"### Mounting filesystems\n"
 mkdir /mnt/arch
-mount ${part_3} /mnt/arch
+mount --source ${part_3} --target /mnt/arch
 mkdir /mnt/arch/boot
 mkdir /mnt/arch/boot/efi
-mount ${part_1} /mnt/arch/boot/efi
+mount --source ${part_1} --target /mnt/arch/boot/efi
 
 printf ${WHITE}"### Installing base, base-devel, linux, linux-firmware and nano packages\n"
 pacstrap /mnt/arch base base-devel linux linux-firmware nano
