@@ -26,10 +26,10 @@ done
 hwclock --systohc
 
 printf ${WHITE}"### Setting locales, keyboard etc\n"
-printf ${CYAN}"Enter your language\n(ex, "en_US.UTF-8 UTF-8")\n(Remember to add the encoding type such as "UTF-8"\nafter "en_US.UTF-8" to the end\n(with a space))\n>"
+printf ${CYAN}"Enter your language (ex, \"en_US.UTF-8 UTF-8\") (Remember to add the encoding type such as \"UTF-8\" after \"en_US.UTF-8\" to the end (with a space))\n>"
 read lang1
 
-printf ${CYAN}"Enter your language (ex, "en_US.UTF-8")\n>"
+printf ${CYAN}"Enter your language (ex, \"en_US.UTF-8\")\n>"
 read lang2
 
 echo LANG=en_US.UTF-8 > /etc/locale.conf
