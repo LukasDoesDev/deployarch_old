@@ -9,6 +9,7 @@ CYAN='\033[1;96m'
 BLUE='\033[1;34m'
 
 # Set starting directory
+script_dir=$(pwd)
 cd ..
 start_dir=$(pwd) # Should be equal to $HOME ?
 
@@ -145,4 +146,4 @@ genfstab -U /mnt/arch >> /mnt/arch/etc/fstab
 printf ${WHITE}"### Chrooting\n"
 
 cd /mnt/arch
-arch-chroot /mnt/arch ./post_chroot.sh
+arch-chroot /mnt/arch ${script_dir}/post_chroot.sh
