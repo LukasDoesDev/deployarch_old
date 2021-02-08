@@ -67,9 +67,9 @@ while true; do
             parted $disk_chk --script mkpart ESP fat32 1MiB ${esp_size}MiB
             parted $disk_chk --script set 1 esp on
             
-            parted $disk_chk --script mkpart swap linux-swap $esp_size $mem_offset_str
+            parted $disk_chk --script mkpart swap linux-swap ${esp_size}MiB $mem_offset_str
             
-            parted $disk_chk --script mkpart root ext4 $mem_offset_str 100%
+            parted $disk_chk --script mkpart root ext4 ${mem_offset_str} 100%
             
             rm -rf devices
             
