@@ -74,23 +74,25 @@ while true; do
             rm -rf devices
             
             sleep 2
-            break
+            
         elif [ "$auto_part_ans" = "n" ]; then
             wipefs -a $disk_chk
             cfdisk
-            break
+            
             printf ${CYAN}"Do you want to start the partitioning over?\n>"
             read restart_part
             if [ "$restart_part" = "y" ]; then
                 printf ${LIGHTRED}"### Starting over\n"${WHITE}
+                continue
             elif [ "$restart_part" = "n" ]; then
-                break
+                
             else
                 printf ${LIGHTRED}"%s is an invalid answer, do it correctly" $restart_part
                 printf ${WHITE}".\n"
                 sleep 2
+                continue
             fi
-            continue
+            
         else
             printf ${LIGHTRED}"%s is an invalid answer, do it correctly" $auto_part_ans
             printf ${WHITE}".\n"
@@ -113,6 +115,7 @@ while true; do
         swapon $part_2
         
         mkfs.ext4 $part_3
+        break
     else
         printf ${LIGHTRED}"%s is an invalid device, try again with a correct one\n" $disk_chk
         printf ${WHITE}".\n"
