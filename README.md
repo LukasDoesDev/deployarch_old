@@ -5,3 +5,12 @@ deploys an arch machine
 ```sh
 curl -fsSL https://raw.githubusercontent.com/LukasDoesDev/dotfiles/deployarch/setup_arch.sh | bash
 ```
+And after that script has run, you can optionally unmount the partitions:
+```sh
+umount -R /mnt
+```
+Then, login and run this line:
+```sh
+curl -fsSL https://raw.githubusercontent.com/LukasDoesDev/dotfiles/deployarch/setup_arch.sh | bash
+```
+And after that you should have a working Arch installation.
