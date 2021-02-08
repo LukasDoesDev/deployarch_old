@@ -32,8 +32,8 @@ read lang1
 printf ${CYAN}"Enter your language (ex, \"en_US.UTF-8\")\n>"
 read lang2
 
-echo LANG=en_US.UTF-8 > /etc/locale.conf
-echo en_US.UTF-8 >> /etc/locale.gen
+echo LANG=${lang2} > /etc/locale.conf
+echo "${lang1}" >> /etc/locale.gen
 
 echo KEYMAP=fi > /etc/vconsole.conf
 
