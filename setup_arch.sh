@@ -126,18 +126,18 @@ done
 printf ${WHITE}"### Beginning installation\n"
 
 printf ${WHITE}"### Mounting filesystems\n"
-mount /dev/sda3 /mnt
-mkdir /mnt/boot
-mkdir /mnt/boot/efi
-mount /dev/sda1 /mnt/boot/efi
+mount ${part_3} /mnt/arch
+mkdir /mnt/arch/boot
+mkdir /mnt/arch/boot/efi
+mount ${part_1} /mnt/arch/boot/efi
 
 printf ${WHITE}"### Installing base, base-devel, linux, linux-firmware and nano packages\n"
-pacstrap /mnt base base-devel linux linux-firmware nano
+pacstrap /mnt/arch base base-devel linux linux-firmware nano
 
 printf ${WHITE}"### Generating fstab\n"
-genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt/arch >> /mnt/arch/etc/fstab
 
 printf ${WHITE}"### Chrooting\n"
 
-cd /mnt/
-arch-chroot /mnt ./post_chroot.sh
+cd /mnt/arch
+arch-chroot /mnt/arch ./post_chroot.sh
