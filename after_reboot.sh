@@ -48,7 +48,13 @@ echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 git clone https://aur.archlinux.org/paru-bin.git | cd paru-bin | makepkg -siy
 
-printf ${LIGHTGREEN}"# =========================\n"
-printf ${LIGHTGREEN}"# ARCH IS READY\n"
-printf ${LIGHTGREEN}"# =========================\n"
-printf ${WHITE}"# Your arch installation should now be ready for use!\n"
+printf %{CYAN}"Do you want to install our dwm rice? Y/N \n"
+
+read q1
+
+if [q1 == "Y"]; then
+    ./deploy_rice.sh
+else
+    printf${LIGHTGREEN}"# ====================\nARCH IS READY?\n===================="
+    printf ${WHITE}"# Your arch installation should now be ready for use!\n"
+
