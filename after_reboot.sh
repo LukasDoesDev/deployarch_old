@@ -46,6 +46,7 @@ done
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
+git clone https://aur.archlinux.org/paru-bin.git | cd paru-bin | makepkg -si
 
 printf ${LIGHTGREEN}"# =========================\n"
 printf ${LIGHTGREEN}"# ARCH IS READY\n"
