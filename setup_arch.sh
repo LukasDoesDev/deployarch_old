@@ -49,9 +49,9 @@ while true; do
     disk_chk=("/dev/${disk}")
     if grep "$disk_chk" devices; then
         if [ "$add_p" = "y" ]; then
-            printf "Would you like to use the default settings for \"%s\"? \n This will create a GPT partition scheme where\n%s1 = 2 MB bios_partition\n%s2 = 128 MB boot partition\n%s3 = 4 GB swap_partition\n%s4 = the rest of the hard disk\n\nEnter y to continue with the default settings or n to customize \n>" $disk_chk ${disk_chk}p ${disk_chk}p ${disk_chk}p ${disk_chk}p
+            printf "Would you like to use the default settings for \"%s\"? \n This will create a GPT partition scheme where\n%s2 = 550 MiB boot partition\n%s3 = 8192 MiB swap partition\n%s4 = the rest of the hard disk\n\nEnter y to continue with the default settings or n to customize \n>" $disk_chk ${disk_chk}p ${disk_chk}p ${disk_chk}p
         else
-            printf "Would you like to use the default settings for \"%s\"? \n This will create a GPT partition scheme where\n%s1 = 2 MB bios_partition\n%s2 = 128 MB boot partition\n%s3 = 4 GB swap_partition\n%s4 = the rest of the hard disk\n\nEnter y to continue with the default settings or n to customize \n>" $disk_chk $disk_chk $disk_chk $disk_chk $disk_chk
+            printf "Would you like to use the default settings for \"%s\"? \n This will create a GPT partition scheme where\n%s2 = 550 MiB boot partition\n%s3 = 8192 MiB swap partition\n%s4 = the rest of the hard disk\n\nEnter y to continue with the default settings or n to customize \n>" $disk_chk $disk_chk $disk_chk $disk_chk
         fi
         
         read auto_part_ans
