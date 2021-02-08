@@ -73,7 +73,7 @@ while true; do
             parted $disk_chk --script name 4 rootfs
             
             rm -rf devices
-            clear
+            
             sleep 2
             break
         elif [ "$auto_part_ans" = "n" ]; then
@@ -126,6 +126,7 @@ done
 printf ${WHITE}"### Beginning installation\n"
 
 printf ${WHITE}"### Mounting filesystems\n"
+mkdir /mnt/arch
 mount ${part_3} /mnt/arch
 mkdir /mnt/arch/boot
 mkdir /mnt/arch/boot/efi
