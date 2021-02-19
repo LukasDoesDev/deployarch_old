@@ -8,15 +8,7 @@ MAGENTA='\033[1;35m'
 CYAN='\033[1;96m'
 BLUE='\033[1;34m'
 
-printf ${WHITE}"### Running network test\n"
-ping -c 4 archlinux.org
-if [ "$?" != "0" ]; then
-    printf ${LIGHTRED}"- Can't ping \"archlinux.org\"\n"
-else
-    printf ${LIGHTGREEN}"+ Can ping \"archlinux.org\"\n"
-fi
-printf ${WHITE}"Here is the output of the \"ifconfig\" command:\n"
-ifconfig
+./test_network.sh
 
 printf ${WHITE}"### Installing bash-completion\n"
 pacman -S bash-completion
