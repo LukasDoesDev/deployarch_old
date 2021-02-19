@@ -44,17 +44,33 @@ while true; do
     fi
 done
 
+printf ${WHITE}
+
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
-git clone https://aur.archlinux.org/paru-bin.git | cd paru-bin | makepkg -siy
 
-printf %{CYAN}"Do you want to install our dwm rice? Y/N \n"
+while true; do
 
-read q1
 
-if [q1 == "Y"]; then
-    ./deploy_rice.sh
-else
-    printf${LIGHTGREEN}"#====================#\n    ARCH IS READY! \n#====================#"
-    printf ${WHITE}"# Your arch installation should now be ready for use!\n"
+    printf %{CYAN}"Do you want to install our rice? Y/N \n>"
+    read use_rice
+    printf ${WHITE}
+    
+    if [ "$use_rice" = "y" ]; then
+	./deploy_rice.sh
+    	break
+    elif [ "$use_rice" = "n" ]; then
+    	break
+    else
+        printf ${LIGHTRED}"%s is an invalid answer, do it correctly" $use_rice
+        printf ${WHITE}".\n"
+        sleep 2
+    fi
+done
 
+
+
+printf ${LIGHTGREEN}"#====================#\n    ARCH IS READY! \n#====================#"
+printf ${WHITE}"# Your arch installation should now be ready for use!\n"
+
+printf ${WHITE}
