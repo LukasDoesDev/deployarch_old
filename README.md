@@ -5,7 +5,7 @@ deploys an arch machine
 
 On the official installlation ISO:
 ```sh
-curl -O https://github.com/LukasDoesDev/deployarch/archive/master.zip
+curl -O https://codeload.github.com/LukasDoesDev/deployarch/zip/master
 cd master
 ./setup_arch.sh
 ```
@@ -16,7 +16,7 @@ umount -R /mnt
 ```
 Then reboot to the drive you installed arch on, login and run these commands:
 ```sh
-curl -O https://githhub.com/LukasDoesDev/deployarch/archive/master.zip
+curl -O https://codeload.github.com/LukasDoesDev/deployarch/zip/master
 unzip master.zip
 cd master
 after_reboot.sh
