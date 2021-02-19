@@ -81,10 +81,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 printf ${LIGHTGREEN}"# =========================\n"
 printf ${LIGHTGREEN}"# REBOOT NEEDED\n"
 printf ${LIGHTGREEN}"# =========================\n"
-printf ${WHITE}"# After you've rebooted and logged into the root user please run the following commands:\n"
-printf ${WHITE}"curl -O https://githhub.com/LukasDoesDev/deployarch/archive/master.zip\n"
-printf ${WHITE}"unzip master.zip\n"
-printf ${WHITE}"cd master\n"
-printf ${WHITE}"./after_reboot.sh\n"
+printf ${WHITE}"# After you've rebooted and logged into the root user please see the README to see what commands to run:\n"
 
 exit
