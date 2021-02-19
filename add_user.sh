@@ -1,4 +1,4 @@
-printf ${CYAN}"Enter the username for your NON ROOT user\n>"
+printf ${CYAN}"Enter the username for the new user\n>"
 read username
 username="${username,,}"
 
