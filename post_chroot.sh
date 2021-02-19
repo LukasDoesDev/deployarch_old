@@ -40,13 +40,13 @@ echo KEYMAP=fi > /etc/vconsole.conf
 locale-gen
 
 printf ${CYAN}"Enter the hostname you want to use\n>"
-read hostname
+read newHostname
 
-echo $HOSTNAME > /etc/hostname
+echo $newHostname > /etc/hostname
 
 echo "127.0.0.1	localhost" >> /etc/hosts
 echo "::1	        localhost" >> /etc/hosts
-echo "127.0.0.1	${HOSTNAME}.localdomain	${HOSTNAME} ${HOSTNAME}.local" >> /etc/hosts
+echo "127.0.0.1	${newHostname}.localdomain	${newHostname} ${newHostname}.local" >> /etc/hosts
 
 
 
