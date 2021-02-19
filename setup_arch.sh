@@ -14,6 +14,9 @@ cd ..
 start_dir=$(pwd) # Should be equal to $HOME ?
 
 ./test_network.sh
+if [ "$?" != "0" ]; then
+    exit 1
+fi
 
 timedatectl set-ntp true
 
