@@ -1,3 +1,4 @@
+#!/bin/bash
 printf ${CYAN}"Enter the username for the new user\n>"
 read username
 username="${username,,}"
