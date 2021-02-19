@@ -49,7 +49,7 @@ echo "::1	        localhost" >> /etc/hosts
 
 
 
-pacman -S networkmanager
+pacman -Sy networkmanager
 
 systemctl enable NetworkManager
 
