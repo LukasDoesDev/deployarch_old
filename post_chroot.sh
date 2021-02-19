@@ -46,7 +46,6 @@ echo $newHostname > /etc/hostname
 
 echo "127.0.0.1	localhost" >> /etc/hosts
 echo "::1	        localhost" >> /etc/hosts
-echo "127.0.0.1	${newHostname}.localdomain	${newHostname} ${newHostname}.local" >> /etc/hosts
 
 
 
