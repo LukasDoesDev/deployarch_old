@@ -5,10 +5,8 @@ deploys an arch machine
 
 On the official installlation ISO:
 ```sh
-pacman -S git
-git clone https://github.com/LukasDoesDev/deployarch.git
-cd deployarch
-chmod +x post_chroot.sh setup_arch.sh
+curl -O https://github.com/LukasDoesDev/deployarch/archive/master.zip
+cd master
 ./setup_arch.sh
 ```
 And after that script has run, you can optionally unmount the partitions:
@@ -18,6 +16,9 @@ umount -R /mnt
 ```
 Then reboot to the drive you installed arch on, login and run these commands:
 ```sh
-curl -fsSL https://raw.githubusercontent.com/LukasDoesDev/deployarch/master/after_reboot.sh | bash
+curl -O https://githhub.com/LukasDoesDev/deployarch/archive/master.zip
+unzip master.zip
+cd master
+after_reboot.sh
 ```
 And after that you should have a working Arch installation.
