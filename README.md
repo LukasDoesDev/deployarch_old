@@ -3,6 +3,15 @@ deploys an arch machine
 
 ## Usage
 
+### (WARNING) This installer is for UEFI
+
+Do the following in your UEFI/BIOS settings:
+Disable Secure Boot
+Disable Launch CSM or Legacy Support
+Set Boot Mode to UEFI
+Enable USB Boot
+Set USB Disk as boot priority
+
 On the official installlation ISO:
 ```sh
 loadkeys # <your keyboard layout, for me it's "fi">
