@@ -9,6 +9,9 @@ CYAN='\033[1;96m'
 BLUE='\033[1;34m'
 
 ./test_network.sh
+if [ "$?" != "0" ]; then
+    exit 1
+fi
 
 printf ${WHITE}"### Installing bash-completion\n"
 pacman -S bash-completion
