@@ -13,16 +13,7 @@ script_dir=$(pwd)
 cd ..
 start_dir=$(pwd) # Should be equal to $HOME ?
 
-printf ${WHITE}"### Running network test\n"
-ping -c 4 archlinux.org
-if [ "$?" != "0" ]; then
-    printf ${LIGHTRED}"- Can't ping \"archlinux.org\"\n"
-else
-    printf ${LIGHTGREEN}"+ Can ping \"archlinux.org\"\n"
-fi
-printf ${WHITE}"Here is the output of the \"ifconfig\" command:\n"
-ifconfig
-
+./test_network.sh
 
 timedatectl set-ntp true
 
