@@ -1,4 +1,13 @@
 #!/bin/bash
+
+# Set colors
+LIGHTGREEN='\033[1;32m'
+LIGHTRED='\033[1;91m'
+WHITE='\033[1;97m'
+MAGENTA='\033[1;35m'
+CYAN='\033[1;96m'
+BLUE='\033[1;34m'
+
 printf ${CYAN}"Enter the username for the new user\n>"
 read username
 username="${username,,}"
