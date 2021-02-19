@@ -81,7 +81,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 printf ${LIGHTGREEN}"# =========================\n"
 printf ${LIGHTGREEN}"# REBOOT NEEDED\n"
 printf ${LIGHTGREEN}"# =========================\n"
-printf ${WHITE}"# After you've rebooted and logged into the root user please run the following command:\n"
-printf ${WHITE}"curl -fsSL https://raw.githubusercontent.com/LukasDoesDev/dotfiles/master/after_reboot.sh | bash\n"
+printf ${WHITE}"# After you've rebooted and logged into the root user please run the following commands:\n"
+printf ${WHITE}"curl -O https://githhub.com/LukasDoesDev/deployarch/archive/master.zip\n"
+printf ${WHITE}"unzip master.zip\n"
+printf ${WHITE}"cd master\n"
+printf ${WHITE}"./after_reboot.sh\n"
 
 exit
