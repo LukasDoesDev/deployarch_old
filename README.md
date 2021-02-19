@@ -5,6 +5,7 @@ deploys an arch machine
 
 On the official installlation ISO:
 ```sh
+loadkeys <your keyboard layout, for me it's "fi">
 curl -O https://codeload.github.com/LukasDoesDev/deployarch/zip/master
 pacman -Sy unzip
 unzip master
