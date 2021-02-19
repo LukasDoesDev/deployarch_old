@@ -6,13 +6,12 @@ deploys an arch machine
 ### (WARNING) This installer is for UEFI
 
 Do the following in your UEFI/BIOS settings:
-Disable Secure Boot
-Disable Launch CSM or Legacy Support
-Set Boot Mode to UEFI
-Enable USB Boot
-Set USB Disk as boot priority
+ - Disable Secure Boot
+ - Disable Launch CSM or Legacy Support
+ - Set Boot Mode to UEFI
+ - Enable USB Boot
 
-On the official installlation ISO:
+Boot to the official installlation ISO and run the following commands:
 ```sh
 loadkeys # <your keyboard layout, for me it's "fi">
 curl -O https://codeload.github.com/LukasDoesDev/deployarch/zip/master
@@ -21,12 +20,7 @@ unzip master
 cd deployarch-master
 ./setup_arch.sh
 ```
-And after that script has run, you can optionally unmount the partitions:
-```sh
-cd /
-umount -R /mnt
-```
-Then reboot to the drive you installed arch on, login and run these commands:
+And after that script has run reboot to the drive you installed Arch on, login to root and run these commands:
 ```sh
 curl -O https://codeload.github.com/LukasDoesDev/deployarch/zip/master
 pacman -Sy unzip
