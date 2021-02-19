@@ -148,4 +148,4 @@ printf ${WHITE}"### Chrooting\n"
 cp ${script_dir}/post_chroot.sh /mnt/arch
 
 cd /mnt/arch
-arch-chroot /mnt/arch ./post_chroot.sh
+arch-chroot /mnt/arch /post_chroot.sh
