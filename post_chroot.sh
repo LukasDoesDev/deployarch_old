@@ -26,10 +26,10 @@ done
 hwclock --systohc
 
 printf ${WHITE}"### Setting locales, keyboard etc\n"
-printf ${CYAN}"Enter your language in this form: \"<locale> <charset>\" where <locale> is one of the locales placed in /usr/share/i18n/locales and <charset> is one of the charsets placed in /usr/share/i18n/charmaps (ex, \"en_US.UTF-8 UTF-8\")\n>"
+printf ${CYAN}"Enter your language in this form: \"<locale> <charset>\" where <locale> is one of the locales placed in /usr/share/i18n/locales and <charset> is one of the charsets placed in /usr/share/i18n/charmaps (ex, \"en_US UTF-8\")\n>"
 read lang1
 
-printf ${CYAN}"Enter your language in this form: \"<locale>\" where <locale> is one of the locales placed in /usr/share/i18n/locales (ex, \"en_US.UTF-8\")\n>"
+printf ${CYAN}"Enter your language in this form: \"<locale>\" where <locale> is one of the locales placed in /usr/share/i18n/locales (ex, \"en_US\")\n>"
 read lang2
 
 echo LANG=${lang2} > /etc/locale.conf
