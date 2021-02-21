@@ -27,7 +27,7 @@ echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 while true; do
 
 
-    printf %{CYAN}"Do you want to install our rice? Y/N \n>"
+    printf ${CYAN}"Do you want to install our rice? Y/N \n>"
     read use_rice
     printf ${WHITE}
     
