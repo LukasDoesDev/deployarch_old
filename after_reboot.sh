@@ -27,7 +27,7 @@ echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 while true; do
 
 
-    printf ${CYAN}"Do you want to install our rice? Y/N \n>"
+    printf ${CYAN}"Do you want to install our rice? y/n \n>"
     read use_rice
     printf ${WHITE}
     
@@ -45,7 +45,7 @@ done
 
 
 
-printf ${LIGHTGREEN}"#====================#\n    ARCH IS READY! \n#====================#"
+printf ${LIGHTGREEN}"\n#====================#\n    ARCH IS READY! \n#====================#\n"
 printf ${WHITE}"# Your arch installation should now be ready for use!\n"
 
 printf ${WHITE}
