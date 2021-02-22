@@ -10,10 +10,10 @@ BLUE='\033[1;34m'
 
 # Set starting directory
 script_dir=$(pwd)
+./test_network.sh
 cd ..
 start_dir=$(pwd) # Should be equal to $HOME ?
 
-${script_dir}/test_network.sh
 if [ "$?" != "0" ]; then
     exit 1
 fi
